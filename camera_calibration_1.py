@@ -37,7 +37,7 @@ for fname in images:
 cv2.destroyAllWindows()
 
 # 标定 返回标定结果，内参数矩阵，畸变系数，旋转矩阵，平移矩阵
-ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera2(objpoints, imgpoints, gray.shape[::-1], None, None)
+ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
 print "ret:", ret
 print "mtx:\n", mtx  # 内参数矩阵
 print "dist:\n", dist  # 畸变系数   distortion cofficients = (k_1,k_2,p_1,p_2,k_3)
